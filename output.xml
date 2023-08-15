@@ -1,114 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230810 23:32:07.338" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230814 21:15:26.504" rpa="false" schemaversion="3">
 <suite id="s1" name="Amazon Testes" source="C:\Projetos\cursoUdemy\RobotFramework\WebTesting\amazon_testes.robot">
-<test id="s1-t1" name="Caso de teste 01 - Acesso ao menu &quot;Eletrônicos&quot;" line="11">
+<test id="s1-t1" name="Caso de teste 01 - Acesso ao menu &quot;Mais vendidos&quot;" line="11">
 <kw name="Abrir o navegador" library="amazon_resources" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=chrome</arg>
 <arg>options=add_experimental_option("detach", True)</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230810 23:32:07.710" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20230810 23:32:07.709" endtime="20230810 23:32:09.446"/>
+<msg timestamp="20230814 21:15:26.714" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20230814 21:15:26.714" endtime="20230814 21:15:28.151"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230810 23:32:09.446" endtime="20230810 23:32:09.586"/>
+<status status="PASS" starttime="20230814 21:15:28.151" endtime="20230814 21:15:28.283"/>
 </kw>
-<status status="PASS" starttime="20230810 23:32:07.708" endtime="20230810 23:32:09.586"/>
+<status status="PASS" starttime="20230814 21:15:26.714" endtime="20230814 21:15:28.283"/>
 </kw>
 <kw name="Acessar a home page do site Amazon.com.br" library="amazon_resources">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>url=${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20230810 23:32:09.589" level="INFO">Opening url 'https://www.amazon.com.br'</msg>
-<status status="PASS" starttime="20230810 23:32:09.589" endtime="20230810 23:32:13.452"/>
+<msg timestamp="20230814 21:15:28.288" level="INFO">Opening url 'https://www.amazon.com.br/'</msg>
+<status status="PASS" starttime="20230814 21:15:28.287" endtime="20230814 21:15:31.962"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>locator=${MENU_ELETRONICO}</arg>
+<arg>locator=${MENU_MAIS_VENDIDOS}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<msg timestamp="20230810 23:32:14.112" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20230810 23:32:14.112" level="FAIL">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //a[@href='/Eletronicos-e-Tecnologia/b/?ie=UTF8&amp;node=16209062011&amp;ref_=nav_cs_electronics'][contains('Eletrônicos')] because of the following error:
-SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//a[@href='/Eletronicos-e-Tecnologia/b/?ie=UTF8&amp;node=16209062011&amp;ref_=nav_cs_electronics'][contains('Eletrônicos')]' is not a valid XPath expression.
-  (Session info: chrome=115.0.5790.171)
-Stacktrace:
-Backtrace:
-	GetHandleVerifier [0x00007FF652C74A62+57106]
-	(No symbol) [0x00007FF652BECF52]
-	(No symbol) [0x00007FF652ABE2CB]
-	(No symbol) [0x00007FF652AC22B2]
-	(No symbol) [0x00007FF652AC3C5F]
-	(No symbol) [0x00007FF652AC3D50]
-	(No symbol) [0x00007FF652AF74E1]
-	(No symbol) [0x00007FF652AF795C]
-	(No symbol) [0x00007FF652B304A7]
-	(No symbol) [0x00007FF652B169FF]
-	(No symbol) [0x00007FF652B2E522]
-	(No symbol) [0x00007FF652B16793]
-	(No symbol) [0x00007FF652AECE81]
-	(No symbol) [0x00007FF652AEE064]
-	GetHandleVerifier [0x00007FF652F24222+2873042]
-	GetHandleVerifier [0x00007FF652F76590+3209792]
-	GetHandleVerifier [0x00007FF652F6F3AF+3180639]
-	GetHandleVerifier [0x00007FF652D05F25+652245]
-	(No symbol) [0x00007FF652BF8618]
-	(No symbol) [0x00007FF652BF47C4]
-	(No symbol) [0x00007FF652BF48BC]
-	(No symbol) [0x00007FF652BE4C33]
-	BaseThreadInitThunk [0x00007FFEB42D26AD+29]
-	RtlUserThreadStart [0x00007FFEB542AA68+40]
-</msg>
-<status status="FAIL" starttime="20230810 23:32:13.452" endtime="20230810 23:32:14.126"/>
+<status status="PASS" starttime="20230814 21:15:31.963" endtime="20230814 21:15:32.074"/>
 </kw>
-<status status="FAIL" starttime="20230810 23:32:09.588" endtime="20230810 23:32:14.126"/>
+<status status="PASS" starttime="20230814 21:15:28.286" endtime="20230814 21:15:32.074"/>
+</kw>
+<kw name="Entrar no Menu Mais Vendidos" library="amazon_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=${MENU_MAIS_VENDIDOS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230814 21:15:32.076" level="INFO">Clicking element '//a[@href='/gp/bestsellers/?ref_=nav_cs_bestsellers'][contains(.,'Mais Vendidos')]'.</msg>
+<status status="PASS" starttime="20230814 21:15:32.075" endtime="20230814 21:15:34.915"/>
+</kw>
+<status status="PASS" starttime="20230814 21:15:32.075" endtime="20230814 21:15:34.915"/>
+</kw>
+<kw name="Verificar se aparece a frase &quot;Mais vendidos&quot;" library="amazon_resources">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=${TEXTO_HEADER_MAIS_VENDIDOS}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230814 21:15:34.917" endtime="20230814 21:15:35.003"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${HEADER_MAIS_VENDIDOS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230814 21:15:35.003" endtime="20230814 21:15:35.067"/>
+</kw>
+<status status="PASS" starttime="20230814 21:15:34.916" endtime="20230814 21:15:35.067"/>
+</kw>
+<kw name="Verificar se o título da página fica Amazon.com.br Mais Vendidos: Os itens mais populares na Amazon" library="amazon_resources" sourcename="Verificar se o título da página fica ${TITULO}">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>title=${TITULO}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230814 21:15:35.082" level="INFO">Page title is 'Amazon.com.br Mais Vendidos: Os itens mais populares na Amazon'.</msg>
+<status status="PASS" starttime="20230814 21:15:35.068" endtime="20230814 21:15:35.082"/>
+</kw>
+<status status="PASS" starttime="20230814 21:15:35.068" endtime="20230814 21:15:35.082"/>
 </kw>
 <doc>Esse teste verifica o menu eletrônicos do site dda Amzon.com.br
 e verifica a categoria Computadores e Informática</doc>
 <tag>categorias</tag>
 <tag>menus</tag>
-<status status="FAIL" starttime="20230810 23:32:07.706" endtime="20230810 23:32:14.127">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //a[@href='/Eletronicos-e-Tecnologia/b/?ie=UTF8&amp;node=16209062011&amp;ref_=nav_cs_electronics'][contains('Eletrônicos')] because of the following error:
-SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//a[@href='/Eletronicos-e-Tecnologia/b/?ie=UTF8&amp;node=16209062011&amp;ref_=nav_cs_electronics'][contains('Eletrônicos')]' is not a valid XPath expression.
-  (Session info: chrome=115.0.5790.171)
-Stacktrace:
-Backtrace:
-	GetHandleVerifier [0x00007FF652C74A62+57106]
-	(No symbol) [0x00007FF652BECF52]
-	(No symbol) [0x00007FF652ABE2CB]
-	(No symbol) [0x00007FF652AC22B2]
-	(No symbol) [0x00007FF652AC3C5F]
-	(No symbol) [0x00007FF652AC3D50]
-	(No symbol) [0x00007FF652AF74E1]
-	(No symbol) [0x00007FF652AF795C]
-	(No symbol) [0x00007FF652B304A7]
-	(No symbol) [0x00007FF652B169FF]
-	(No symbol) [0x00007FF652B2E522]
-	(No symbol) [0x00007FF652B16793]
-	(No symbol) [0x00007FF652AECE81]
-	(No symbol) [0x00007FF652AEE064]
-	GetHandleVerifier [0x00007FF652F24222+2873042]
-	GetHandleVerifier [0x00007FF652F76590+3209792]
-	GetHandleVerifier [0x00007FF652F6F3AF+3180639]
-	GetHandleVerifier [0x00007FF652D05F25+652245]
-	(No symbol) [0x00007FF652BF8618]
-	(No symbol) [0x00007FF652BF47C4]
-	(No symbol) [0x00007FF652BF48BC]
-	(No symbol) [0x00007FF652BE4C33]
-	BaseThreadInitThunk [0x00007FFEB42D26AD+29]
-	RtlUserThreadStart [0x00007FFEB542AA68+40]
-</status>
+<status status="PASS" starttime="20230814 21:15:26.713" endtime="20230814 21:15:35.083"/>
 </test>
 <doc>Essa suite teste o site da Amazon</doc>
-<status status="FAIL" starttime="20230810 23:32:07.342" endtime="20230810 23:32:14.136"/>
+<status status="PASS" starttime="20230814 21:15:26.505" endtime="20230814 21:15:35.085"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">categorias</stat>
-<stat pass="0" fail="1" skip="0">menus</stat>
+<stat pass="1" fail="0" skip="0">categorias</stat>
+<stat pass="1" fail="0" skip="0">menus</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Amazon Testes">Amazon Testes</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Amazon Testes">Amazon Testes</stat>
 </suite>
 </statistics>
 <errors>

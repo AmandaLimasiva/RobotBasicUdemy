@@ -8,14 +8,14 @@ Test Setup     Abrir o navegador
 
 *** Test Cases ***
 
-Caso de teste 01 - Acesso ao menu "Eletrônicos"
+Caso de teste 01 - Acesso ao menu "Mais vendidos"
     [Documentation]  Esse teste verifica o menu eletrônicos do site dda Amzon.com.br
     ...              e verifica a categoria Computadores e Informática
     [Tags]           menus  categorias
     Acessar a home page do site Amazon.com.br
-#     2 Entrar no menu "Eletrônicos"
-#     Verificar se o título da página fica "Eletrônicos e Tecnologia Amazon.com.br
-#     Verificar se aparece a frase "Eletrônicos e Tecnologia
+    Entrar no menu Mais vendidoS    # Verificar se aparece a frase "Mais vendidos"
+    Verificar se aparece a frase "Mais vendidos"
+    Verificar se o título da página fica Amazon.com.br Mais Vendidos: Os itens mais populares na Amazon
 #     Verificar se aparece a categoria "Computadores e Informática
 
 
