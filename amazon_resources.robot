@@ -9,7 +9,9 @@ ${HEADER_MAIS_VENDIDOS}    //span[contains(@class,'a-size-extra-large a-color-ba
 ${TEXTO_HEADER_MAIS_VENDIDOS}    Mais vendidos
 # ${TITULO}    Amazon.com.br Mais Vendidos: Os itens mais populares na Amazon
 ${ELETRONICO}    //a[@href='/gp/bestsellers/electronics/ref=zg_bs_nav_0'][contains(.,'Eletrônicos')],
-
+${X_BOX}    Xbox Series X
+${CAMPO_PESQUISA}    //input[contains(@type,'text')]
+${BTN_SUBMIT}    //input[contains(@type,'submit')]
 
 *** Keywords ***
 Abrir o navegador
@@ -33,3 +35,17 @@ Verificar se aparece a frase "Mais vendidos"
 
 Verificar se o título da página fica ${TITULO}
     Title Should Be    title=${TITULO}
+
+Digitar o nome de produto "Xbox Series S" no campo de pesquisa
+    Click Element    locator=//input[contains(@type,'text')]
+    Input Text    locator=${CAMPO_PESQUISA}    text=${X_BOX}
+
+Clicar no botão de pesquisa
+    Click Button    locator=${BTN_SUBMIT}
+
+
+Verificar se o título da página eh ${TITULO_Xbox}
+    Title Should Be    title={TITULO_Xbox}
+
+Verificar o resultado da pesquisa listando o produto
+    Wait Until page Contains    text=${X_BOX}

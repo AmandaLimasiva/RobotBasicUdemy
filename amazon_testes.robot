@@ -19,10 +19,10 @@ Caso de teste 01 - Acesso ao menu "Mais vendidos"
 #     Verificar se aparece a categoria "Computadores e Informática
 
 
-# Caso de teste 02 - "Pesquisa de Produto"
-#     [Documentation]  Esse teste verifica a busca de um produto
-#     [Tags]           busca_produtos  lista_busca
-#     1 Acessar a home page do site Amazon.com.br
-#     Digitar o nome de produto "Xbox Series S" no campo de pesquisa
-#     Clicar no botão de pesquisa
-#     Verificar o resultado da pesquisa listando o produto escolhido
+Caso de teste 02 - "Pesquisa de Produto"
+    [Documentation]  Esse teste verifica a busca de um produto
+    [Tags]           busca_produtos  lista_busca
+    Acessar a home page do site Amazon.com.br
+    Digitar o nome de produto "Xbox Series S" no campo de pesquisa
+    Clicar no botão de pesquisa
+    Verificar o resultado da pesquisa listando o produto
