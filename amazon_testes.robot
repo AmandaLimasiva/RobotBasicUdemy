@@ -2,7 +2,7 @@
 Documentation  Essa suite teste o site da Amazon
 Resource   amazon_resources.robot
 Test Setup     Abrir o navegador
-Test Teardown  Fechar o navegador
+# Test Teardown  Fechar o navegador
 
 
 
@@ -26,3 +26,11 @@ Caso de teste 02 - "Pesquisa de Produto"
     Digitar o nome de produto "Xbox Series S" no campo de pesquisa
     Clicar no botão de pesquisa
     Verificar o resultado da pesquisa listando o produto
+
+Caso de teste 03 - "Pesquisa livro de Harrt Potter"
+    [Documentation]    Esse teste busca meu livro favorito
+    [Tags]    busca_livro   hp
+    Acessar a home page do site Amazon.com.br
+    Buscar livro de nome "Harry Potter" no campo de pesquisa
+    Clicar no botão de pesquisa
+    Verificar se o resultado da pesquisa lista o produto "Harry Potter e a Pedra Filosofal: 1"

@@ -12,6 +12,7 @@ ${ELETRONICO}    //a[@href='/gp/bestsellers/electronics/ref=zg_bs_nav_0'][contai
 ${X_BOX}    Xbox Series X
 ${CAMPO_PESQUISA}    //input[contains(@type,'text')]
 ${BTN_SUBMIT}    //input[contains(@type,'submit')]
+${LIVRO_HARRY_POTTER}    harry potter e a pedra filosofal
 
 *** Keywords ***
 Abrir o navegador
@@ -50,3 +51,11 @@ Verificar se o título da página eh ${TITULO_Xbox}
 
 Verificar o resultado da pesquisa listando o produto
     Wait Until page Contains    text=${X_BOX}
+
+
+Buscar livro de nome ${produto} no campo de pesquisa
+    Click Element    locator=//input[contains(@type,'text')]
+    Input Text    locator=${CAMPO_PESQUISA}    text=${LIVRO_HARRY_POTTER}
+
+Verificar se o resultado da pesquisa lista o produto "${LIVRO}"
+    Wait Until Element Is Visible    locator=(//span[@class='a-size-base-plus a-color-base a-text-normal'][contains(.,'${LIVRO}')])[1]
