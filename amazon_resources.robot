@@ -20,6 +20,7 @@ Abrir o navegador
 
 Fechar o navegador
     Close Browser
+    Capture Page Screenshot
 
 Acessar a home page do site Amazon.com.br
     Go To    url=${URL}
@@ -36,7 +37,7 @@ Verificar se aparece a frase "Mais vendidos"
 Verificar se o título da página fica ${TITULO}
     Title Should Be    title=${TITULO}
 
-Digitar o nome de produto "Xbox Series S" no campo de pesquisa
+Digitar o nome de produto ${produto} no campo de pesquisa
     Click Element    locator=//input[contains(@type,'text')]
     Input Text    locator=${CAMPO_PESQUISA}    text=${X_BOX}
 
