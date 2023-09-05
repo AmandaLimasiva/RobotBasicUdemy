@@ -59,3 +59,24 @@ Buscar livro de nome ${produto} no campo de pesquisa
 
 Verificar se o resultado da pesquisa lista o produto "${LIVRO}"
     Wait Until Element Is Visible    locator=(//span[@class='a-size-base-plus a-color-base a-text-normal'][contains(.,'${LIVRO}')])[1]
+
+
+################################ GHERKIN STEPS
+
+Dado que estou na home page da Amazon.com.br
+    Acessar a home page do site Amazon.com.br
+    Verificar se o título da página fica Amazon.com.br | Tudo pra você, de A a Z.
+
+Quando acessar o menu "Mais Vendidos"
+    Entrar no Menu Mais Vendidos
+
+Então o título da página deve ficar Mais Vendidos | Amazon.com.br"
+    Verificar se aparece a frase "Mais vendidos"
+
+Quando pesquisar pelo produto "Xbox Series X"
+    Acessar a home page do site Amazon.com.br
+    Digitar o nome de produto "Xbox Series X" no campo de pesquisa
+    Clicar no botão de pesquisa
+
+Então o produto da linha "Xbox Series X" deve ser mostrado na página
+    Verificar o resultado da pesquisa listando o produto

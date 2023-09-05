@@ -23,12 +23,12 @@ Caso de teste 02 - "Pesquisa de Produto"
     [Documentation]  Esse teste verifica a busca de um produto
     [Tags]           busca_produtos  lista_busca
     Acessar a home page do site Amazon.com.br
-    Digitar o nome de produto "Xbox Series S" no campo de pesquisa
+    Digitar o nome de produto "Xbox Series X" no campo de pesquisa
     Clicar no botão de pesquisa
     Verificar o resultado da pesquisa listando o produto
 
 Caso de teste 03 - "Pesquisa livro de Harrt Potter"
-    [Documentation]    Esse teste busca meu livro favorito
+    [Documentation]    Esse teste busca meu livro favorito na Amazon
     [Tags]    busca_livro   hp
     Acessar a home page do site Amazon.com.br
     Buscar livro de nome "Harry Potter" no campo de pesquisa
