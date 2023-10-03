@@ -16,8 +16,8 @@ ${LIVRO_HARRY_POTTER}    harry potter e a pedra filosofal
 
 *** Keywords ***
 Abrir o navegador
-    Open Browser   browser=chrome  options=add_experimental_option("detach", True)
-    Maximize Browser Window
+    Open Browser   ##browser=firefox  options=add_experimental_option("detach", True)
+    ##Maximize Browser Window
 
 Fechar o navegador
     Close Browser
@@ -80,3 +80,12 @@ Quando pesquisar pelo produto "Xbox Series X"
 
 Então o produto da linha "Xbox Series X" deve ser mostrado na página
     Verificar o resultado da pesquisa listando o produto
+
+Adicionar livro de HP Pedra Filosofal no Carrinho
+    Click Element    locator=//img[@data-image-index='1']
+    Click Element    locator=//input[contains(@name,'submit.add-to-cart')]
+    Element Should Be Enabled    locator=//span[@class='a-size-medium-plus a-color-base sw-atc-text a-text-bold'][contains(.,'Adicionado ao carrinho')]
+
+Clicar no livro e adicionar no Carrinho
+    Adicionar livro de HP Pedra Filosofal no Carrinho
+
