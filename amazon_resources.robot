@@ -89,3 +89,5 @@ Adicionar livro de HP Pedra Filosofal no Carrinho
 Clicar no livro e adicionar no Carrinho
     Adicionar livro de HP Pedra Filosofal no Carrinho
 
+Remover item do carrinho
+    Click Button    locator=//input[contains(@title,'Excluir')]
